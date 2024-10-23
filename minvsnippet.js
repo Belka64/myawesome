@@ -40,6 +40,13 @@ async function makePostRequest() {
             }
         });
 
+        // Resetting and enabling the select element
+        const selectElement = document.getElementById('f1-life-situation-select2');
+        if (selectElement) {
+            selectElement.selectedIndex = 0; // Reset to the first option
+            selectElement.disabled = false; // Enable the select element
+        }
+
     } catch (error) {
         console.error('Error:', error);
     }
